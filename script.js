@@ -75,7 +75,7 @@ async function displayAlbums() {
     let folders = await response.json();
 
     for (let folder of folders) {
-        let response = await fetch(`http://127.0.0.1:3000/songs/${folder}/info.json`);
+        let response = await fetch(`songs/${folder}/info.json`);
         let info = await response.json();
         document.querySelector(".cardContainer").innerHTML += `<div data-folder="${folder}" class="card">
                         <div class="play">
