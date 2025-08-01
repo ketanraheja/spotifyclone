@@ -77,6 +77,7 @@ async function displayAlbums() {
     for (let folder of folders) {
         let response = await fetch(`songs/${folder}/info.json`);
         let info = await response.json();
+        currentFolder = folder;
         document.querySelector(".cardContainer").innerHTML += `<div data-folder="${folder}" class="card">
                         <div class="play">
                             <img src="svg/cardplay.svg" alt="">
@@ -195,5 +196,6 @@ function playMusic(track, pause = false) {
     document.querySelector(".songInfo").innerHTML = track;
     document.querySelector(".songDuration").innerHTML = "0:00 / 0:00";
 }
+
 
 main()
