@@ -26,7 +26,7 @@ async function getSongs(folder) {
     //     }
     // }
     let response = await fetch(`songs/${folder}/songs.json`);
-    let songs = await response.json();
+    songs = await response.json();
     let songList = document.getElementsByClassName("songUL")[0];
     songList.innerHTML = "";
     for (const song of songs) {
