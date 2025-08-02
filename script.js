@@ -90,7 +90,7 @@ async function displayAlbums() {
     // Add an event listener to cards
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         e.addEventListener("click", async item => {
-            songs = await getSongs(item.currentTarget.dataset.folder);
+            await getSongs(item.currentTarget.dataset.folder);
             playMusic(songs[0]);
         })
     });
@@ -183,7 +183,6 @@ async function main() {
             vol.value = 20;
         }
     })
-
 }
 
 function playMusic(track, pause = false) {
