@@ -44,7 +44,6 @@ async function getSongs(folder) {
             playMusic(element.querySelector(".song").innerHTML.trim())
         })
     });
-    return songs;
 }
 
 async function displayAlbums() {
