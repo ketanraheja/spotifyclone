@@ -98,7 +98,7 @@ async function displayAlbums() {
 
 
 async function main() {
-    let songs = await getSongs("diljit");
+    await getSongs("diljit");
     playMusic(songs[0], true);
 
     // Display all the albums
